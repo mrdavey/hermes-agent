@@ -1,0 +1,387 @@
+{
+  "date": "2026-11-09",
+  "plugin_version": "1.0.5",
+  "public_pin": "7ffd9232bf59de70927c45c42e8d73d345c62b32",
+  "catalogue_checks": {
+    "entry_sha256": "2fa8f2df8e84c9356c7e70c1d18867136261db1858955db36fcffe7827931a9a",
+    "schema_accepted": true,
+    "schema_files_checked": 1205,
+    "schema_ruamel_version": "0.18.17",
+    "candidate_schema_warnings": [],
+    "manifest_and_capabilities_match": true,
+    "tool_count": 22,
+    "hook_count": 5,
+    "payload_scanner_findings": [],
+    "self_updater_matches": []
+  },
+  "hosts": {
+    "floor": {
+      "host_version_line": "Hermes Agent v0.22.7 (2026.9.24) \u00b7 stable \u00b7 local b200f5bc60e3",
+      "host_commit": "b200f5bc60e31588ba2cb60e288029c4a54ba5fa",
+      "artifact": "source export matching the public tree",
+      "checked_at": "2026-11-09T07:55:04.563416+00:00",
+      "doctor_exit_code": 0,
+      "validate_exit_code": 0,
+      "native_tests": 25,
+      "management_backend_tests": 5,
+      "validator_diagnostics": {
+        "checks": [
+          {
+            "detail": "plugin.yaml parses",
+            "name": "manifest",
+            "ok": true
+          },
+          {
+            "detail": "name, version, description present",
+            "name": "manifest fields",
+            "ok": true
+          },
+          {
+            "detail": "spec '>=0.22.7' parses",
+            "name": "requires_hermes",
+            "ok": true
+          },
+          {
+            "detail": "not declared",
+            "name": "config schema",
+            "ok": true
+          },
+          {
+            "detail": "all entries UPPER_SNAKE",
+            "name": "requires_env",
+            "ok": true
+          },
+          {
+            "detail": "clients valid",
+            "name": "oauth",
+            "ok": true
+          },
+          {
+            "detail": "entry: __init__.py, desktop/plugin.js",
+            "name": "loadable",
+            "ok": true
+          },
+          {
+            "detail": "none declared",
+            "name": "python dependencies",
+            "ok": true
+          },
+          {
+            "detail": "register() ran in isolation",
+            "name": "capability probe",
+            "ok": true
+          },
+          {
+            "detail": "matches registrations",
+            "name": "declared tools",
+            "ok": true
+          },
+          {
+            "detail": "matches registrations",
+            "name": "declared hooks",
+            "ok": true
+          },
+          {
+            "detail": "matches registrations",
+            "name": "declared middleware",
+            "ok": true
+          },
+          {
+            "detail": "no collisions",
+            "name": "built-in tool collisions",
+            "ok": true
+          },
+          {
+            "detail": "safe",
+            "name": "security scan",
+            "ok": true
+          },
+          {
+            "detail": "no runtime rebinds of Hermes core",
+            "name": "no core override",
+            "ok": true
+          },
+          {
+            "detail": "stays inside the plugin SDK surface",
+            "name": "desktop surface",
+            "ok": true
+          }
+        ],
+        "isolation": {
+          "ctx_methods": [
+            "inject_message",
+            "register_hook",
+            "register_skill",
+            "register_tool"
+          ],
+          "host_ready": true,
+          "notes": [
+            "dashboard backend API is served through the plugin host (buffered responses)"
+          ],
+          "reasons": [],
+          "verdict": "host"
+        },
+        "ok": true,
+        "warnings": []
+      },
+      "test_dependency_notice": "Host Starlette TestClient deprecates httpx. Five tests passed."
+    },
+    "stable": {
+      "host_version_line": "Hermes Agent v0.23.0 (2026.9.24) \u00b7 stable \u00b7 local 2bd378ed1b8d",
+      "host_commit": "2bd378ed1b8d6bf2192cb26e0a55ff3091e6bd19",
+      "artifact": "published pin clone",
+      "checked_at": "2026-11-09T07:57:27.696294+00:00",
+      "doctor_exit_code": 0,
+      "validate_exit_code": 0,
+      "native_tests": 25,
+      "management_backend_tests": 5,
+      "validator_diagnostics": {
+        "ok": true,
+        "checks": [
+          {
+            "name": "manifest",
+            "ok": true,
+            "detail": "plugin.yaml parses"
+          },
+          {
+            "name": "manifest fields",
+            "ok": true,
+            "detail": "name, version, description present"
+          },
+          {
+            "name": "requires_hermes",
+            "ok": true,
+            "detail": "spec '>=0.22.7' parses"
+          },
+          {
+            "name": "config schema",
+            "ok": true,
+            "detail": "not declared"
+          },
+          {
+            "name": "requires_env",
+            "ok": true,
+            "detail": "all entries UPPER_SNAKE"
+          },
+          {
+            "name": "oauth",
+            "ok": true,
+            "detail": "clients valid"
+          },
+          {
+            "name": "loadable",
+            "ok": true,
+            "detail": "entry: __init__.py, desktop/plugin.js"
+          },
+          {
+            "name": "python dependencies",
+            "ok": true,
+            "detail": "none declared"
+          },
+          {
+            "name": "capability probe",
+            "ok": true,
+            "detail": "register() ran in isolation"
+          },
+          {
+            "name": "declared tools",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared hooks",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared middleware",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "built-in tool collisions",
+            "ok": true,
+            "detail": "no collisions"
+          },
+          {
+            "name": "security scan",
+            "ok": true,
+            "detail": "safe"
+          },
+          {
+            "name": "no core override",
+            "ok": true,
+            "detail": "no runtime rebinds of Hermes core"
+          },
+          {
+            "name": "desktop surface",
+            "ok": true,
+            "detail": "stays inside the plugin SDK surface"
+          }
+        ],
+        "warnings": [],
+        "isolation": {
+          "verdict": "host",
+          "host_ready": true,
+          "reasons": [],
+          "notes": [
+            "dashboard backend API is served through the plugin host (buffered responses)"
+          ],
+          "ctx_methods": [
+            "inject_message",
+            "register_hook",
+            "register_skill",
+            "register_tool"
+          ]
+        }
+      },
+      "test_dependency_notice": "Host Starlette TestClient deprecates httpx. Five tests passed."
+    },
+    "upstream": {
+      "host_version_line": "Hermes Agent vgit.109fd81 (2026.9.24) \u00b7 stable \u00b7 local 109fd8161a50",
+      "host_commit": "109fd8161a509db5a00942152ba48882e446e8b0",
+      "artifact": "published pin clone",
+      "checked_at": "2026-11-09T07:55:36.872439+00:00",
+      "doctor_exit_code": 0,
+      "validate_exit_code": 0,
+      "native_tests": 25,
+      "management_backend_tests": 5,
+      "validator_diagnostics": {
+        "ok": true,
+        "checks": [
+          {
+            "name": "manifest",
+            "ok": true,
+            "detail": "plugin.yaml parses"
+          },
+          {
+            "name": "manifest fields",
+            "ok": true,
+            "detail": "name, version, description present"
+          },
+          {
+            "name": "requires_hermes",
+            "ok": true,
+            "detail": "spec '>=0.22.7' parses"
+          },
+          {
+            "name": "config schema",
+            "ok": true,
+            "detail": "not declared"
+          },
+          {
+            "name": "requires_env",
+            "ok": true,
+            "detail": "all entries UPPER_SNAKE"
+          },
+          {
+            "name": "oauth",
+            "ok": true,
+            "detail": "clients valid"
+          },
+          {
+            "name": "loadable",
+            "ok": true,
+            "detail": "entry: __init__.py, desktop/plugin.js"
+          },
+          {
+            "name": "python dependencies",
+            "ok": true,
+            "detail": "none declared"
+          },
+          {
+            "name": "capability probe",
+            "ok": true,
+            "detail": "register() ran in isolation"
+          },
+          {
+            "name": "declared tools",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared hooks",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared middleware",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "built-in tool collisions",
+            "ok": true,
+            "detail": "no collisions"
+          },
+          {
+            "name": "security scan",
+            "ok": true,
+            "detail": "safe"
+          },
+          {
+            "name": "no core override",
+            "ok": true,
+            "detail": "no runtime rebinds of Hermes core"
+          },
+          {
+            "name": "desktop surface",
+            "ok": true,
+            "detail": "stays inside the plugin SDK surface"
+          }
+        ],
+        "warnings": [],
+        "isolation": {
+          "verdict": "host",
+          "host_ready": true,
+          "reasons": [],
+          "notes": [
+            "dashboard backend API is served through the plugin host (buffered responses)"
+          ],
+          "ctx_methods": [
+            "inject_message",
+            "register_hook",
+            "register_skill",
+            "register_tool"
+          ]
+        }
+      },
+      "test_dependency_notice": "Host Starlette TestClient deprecates httpx. Five tests passed."
+    }
+  },
+  "upstream_native_install_contract": {
+    "schema": "pantheon.hermes-native-install-probe.v1",
+    "fresh_install": true,
+    "default_branch": "main",
+    "successive_fixture_versions": [
+      "1.0.5",
+      "1.0.6",
+      "1.0.7"
+    ],
+    "state_preserved": true,
+    "native_disable_enable": true,
+    "named_profile_state_isolation": true,
+    "actual_agent_delivery": false,
+    "catalog_updates": false
+  },
+  "upstream_linux_oauth_contract": {
+    "native_pkce": true,
+    "trusted_tls": true,
+    "plugin_owned_helper": true,
+    "background_scope": true,
+    "two_process_refresh": true,
+    "metadata_session_gate": true,
+    "native_logout": true,
+    "actual_agent_delivery": false
+  },
+  "desktop_sdk_adapter": {
+    "tests_passed": 8,
+    "existing_fixture_screenshots_byte_identical": true,
+    "initial_run": "Stopped after a missing fixture dependency caused Vite import errors. Installed the locked dependencies in the disposable checkout and reran successfully."
+  },
+  "scope": [
+    "The 7 November live test used a single owner and default profile in Hermes Desktop 0.22.7.",
+    "The 9 November host runs used disposable environments and synthetic identity. No new paid provider or production OAuth tests were performed.",
+    "Install/update probes use fixture commits. Catalogue-name install, reviewed SHA updates, upstream PR CI and maintainer acceptance require the catalogue workflow."
+  ]
+}
