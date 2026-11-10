@@ -2,11 +2,11 @@
   "schema": "pantheon.hermes-catalog-validation.v1",
   "checked_at": "2026-11-10",
   "version": "1.0.6",
-  "source_commit": "171cd02dcd5d261da3a10a5f59e40df2a4d862cb",
-  "public_commit": "aa7704036e4cf414918100cad76bc3330b027260",
-  "public_branch": "codex/catalog-review-1.0.6",
+  "source_commit": "fece2911a422ccf69963766a1274cb939f6d2844",
+  "public_commit": "40e7eddf1a3d2b8d94a8f49af6b86e3e3f07ec46",
+  "public_branch": "main",
   "previous_reviewed_commit": "7ffd9232bf59de70927c45c42e8d73d345c62b32",
-  "export_archive_sha256": "95f265d93b7a75b50deed29e72f907479b623a0a966075548d3c71164ed12f71",
+  "export_archive_sha256": "109dd2399e6342132ee7465348cc52f37a6ac1fc628df37ed1a5bb99bee17997",
   "catalog_schema": {
     "passed": true,
     "warnings": [],
@@ -188,7 +188,8 @@
         "timed_out": false
       }
     ],
-    "warnings": []
+    "warnings": [],
+    "tested_public_candidate": "aa7704036e4cf414918100cad76bc3330b027260"
   },
   "macos_upstream_public_install": {
     "host": {
@@ -362,13 +363,16 @@
         "timed_out": false
       }
     ],
-    "warnings": []
+    "warnings": [],
+    "tested_public_candidate": "aa7704036e4cf414918100cad76bc3330b027260"
   },
   "public_install": {
     "fresh_native_git_install": true,
-    "installed_commit": "aa7704036e4cf414918100cad76bc3330b027260",
+    "installed_commit": "40e7eddf1a3d2b8d94a8f49af6b86e3e3f07ec46",
     "public_client_configuration": true,
-    "human_incoming_permission_not_enabled_by_agent": true
+    "human_incoming_permission_not_enabled_by_agent": true,
+    "native_desktop_agent_and_ui_installed": true,
+    "clean_profile_on_existing_desktop": true
   },
   "native_update_fixture": {
     "schema": "pantheon.hermes-native-install-probe.v1",
@@ -412,9 +416,318 @@
     "tests_passed": 8
   },
   "scope": [
-    "All new host checks used disposable profiles and synthetic data; no paid provider calls or fresh human Google sign-in were performed.",
-    "The exact 1.0.6 export is a public review candidate. The default Git release and protected production discovery remain at 1.0.5.",
-    "The 7 November live evidence and competition demo are historical 1.0.5 single-operator evidence. These checks do not establish new actual-agent or independent-owner qualification.",
-    "Catalog-name installation and upstream catalog acceptance are not claimed."
-  ]
+    "1.0.6 is published on the public default branch at 40e7eddf and deployed on both production origins.",
+    "The bounded fresh-profile Desktop flow passed with the interventions and limits recorded here.",
+    "The catalog PR remains draft; catalog acceptance and independent-owner qualification are not claimed."
+  ],
+  "previous_candidate": "aa7704036e4cf414918100cad76bc3330b027260",
+  "export_equivalence": {
+    "previous_candidate": "aa7704036e4cf414918100cad76bc3330b027260",
+    "unchanged_files": 21,
+    "changed_files": [
+      "SOURCE-PROVENANCE.json"
+    ],
+    "whole_public_tree_matched_reviewed_export": true
+  },
+  "final_source_contract": {
+    "checked_at": "2026-11-10T11:59:48.821241+00:00",
+    "hermes_commit": "0d8286bf3c5cc054073e6fb88c5a4d107b986aa3",
+    "source_commit": "fece2911a422ccf69963766a1274cb939f6d2844",
+    "export_files": 22,
+    "doctor_exit_code": 0,
+    "validate": {
+      "checks": [
+        {
+          "detail": "plugin.yaml parses",
+          "name": "manifest",
+          "ok": true
+        },
+        {
+          "detail": "name, version, description present",
+          "name": "manifest fields",
+          "ok": true
+        },
+        {
+          "detail": "spec '>=0.22.7' parses",
+          "name": "requires_hermes",
+          "ok": true
+        },
+        {
+          "detail": "not declared",
+          "name": "config schema",
+          "ok": true
+        },
+        {
+          "detail": "all entries UPPER_SNAKE",
+          "name": "requires_env",
+          "ok": true
+        },
+        {
+          "detail": "clients valid",
+          "name": "oauth",
+          "ok": true
+        },
+        {
+          "detail": "entry: __init__.py, desktop/plugin.js",
+          "name": "loadable",
+          "ok": true
+        },
+        {
+          "detail": "none declared",
+          "name": "python dependencies",
+          "ok": true
+        },
+        {
+          "detail": "register() ran in isolation",
+          "name": "capability probe",
+          "ok": true
+        },
+        {
+          "detail": "matches registrations",
+          "name": "declared tools",
+          "ok": true
+        },
+        {
+          "detail": "matches registrations",
+          "name": "declared hooks",
+          "ok": true
+        },
+        {
+          "detail": "matches registrations",
+          "name": "declared middleware",
+          "ok": true
+        },
+        {
+          "detail": "no collisions",
+          "name": "built-in tool collisions",
+          "ok": true
+        },
+        {
+          "detail": "safe",
+          "name": "security scan",
+          "ok": true
+        },
+        {
+          "detail": "no runtime rebinds of Hermes core",
+          "name": "no core override",
+          "ok": true
+        },
+        {
+          "detail": "stays inside the plugin SDK surface",
+          "name": "desktop surface",
+          "ok": true
+        }
+      ],
+      "isolation": {
+        "ctx_methods": [
+          "inject_message",
+          "register_hook",
+          "register_skill",
+          "register_tool"
+        ],
+        "host_ready": true,
+        "notes": [
+          "dashboard backend API is served through the plugin host (buffered responses)"
+        ],
+        "reasons": [],
+        "verdict": "host"
+      },
+      "ok": true,
+      "warnings": []
+    },
+    "native_tests_passed": 36,
+    "management_tests_passed": 5,
+    "warnings": []
+  },
+  "exact_public_checkout_validation": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "manifest",
+        "ok": true,
+        "detail": "plugin.yaml parses"
+      },
+      {
+        "name": "manifest fields",
+        "ok": true,
+        "detail": "name, version, description present"
+      },
+      {
+        "name": "requires_hermes",
+        "ok": true,
+        "detail": "spec '>=0.22.7' parses"
+      },
+      {
+        "name": "config schema",
+        "ok": true,
+        "detail": "not declared"
+      },
+      {
+        "name": "requires_env",
+        "ok": true,
+        "detail": "all entries UPPER_SNAKE"
+      },
+      {
+        "name": "oauth",
+        "ok": true,
+        "detail": "clients valid"
+      },
+      {
+        "name": "loadable",
+        "ok": true,
+        "detail": "entry: __init__.py, desktop/plugin.js"
+      },
+      {
+        "name": "python dependencies",
+        "ok": true,
+        "detail": "none declared"
+      },
+      {
+        "name": "capability probe",
+        "ok": true,
+        "detail": "register() ran in isolation"
+      },
+      {
+        "name": "declared tools",
+        "ok": true,
+        "detail": "matches registrations"
+      },
+      {
+        "name": "declared hooks",
+        "ok": true,
+        "detail": "matches registrations"
+      },
+      {
+        "name": "declared middleware",
+        "ok": true,
+        "detail": "matches registrations"
+      },
+      {
+        "name": "built-in tool collisions",
+        "ok": true,
+        "detail": "no collisions"
+      },
+      {
+        "name": "security scan",
+        "ok": true,
+        "detail": "safe"
+      },
+      {
+        "name": "no core override",
+        "ok": true,
+        "detail": "no runtime rebinds of Hermes core"
+      },
+      {
+        "name": "desktop surface",
+        "ok": true,
+        "detail": "stays inside the plugin SDK surface"
+      }
+    ],
+    "warnings": [],
+    "isolation": {
+      "verdict": "host",
+      "host_ready": true,
+      "reasons": [],
+      "notes": [
+        "dashboard backend API is served through the plugin host (buffered responses)"
+      ],
+      "ctx_methods": [
+        "inject_message",
+        "register_hook",
+        "register_skill",
+        "register_tool"
+      ]
+    }
+  },
+  "actual_desktop_acceptance": {
+    "schema": "pantheon.hermes-native-owner-acceptance.v1",
+    "date": "2026-11-10",
+    "status": "bounded-clean-profile-desktop-pass",
+    "plugin_version": "1.0.6",
+    "public_commit": "40e7eddf1a3d2b8d94a8f49af6b86e3e3f07ec46",
+    "desktop_version": "0.23.0",
+    "profile": "pantheon106acceptance",
+    "scope": {
+      "fresh_profile_without_cloning": true,
+      "existing_desktop_installation": true,
+      "existing_owner_google_account": true,
+      "clean_os": false,
+      "independent_second_owner": false,
+      "catalog_install": false,
+      "zero_intervention_claim": false
+    },
+    "installation": {
+      "native_desktop_install_from_git": true,
+      "public_default_branch": true,
+      "agent_and_desktop_enabled": true,
+      "native_oauth_cli_google_sign_in": true,
+      "credential_files_read_or_copied": false
+    },
+    "observed": {
+      "human_permission_gate": "incoming_permission_required; exact native command shown; Hermes ended its turn without enabling the permission",
+      "permission_enabled_by": "operator via native CLI outside the Hermes model",
+      "join": true,
+      "readiness_posts": 1,
+      "automatic_turns": 2,
+      "automatic_turn_kinds": [
+        "collaboration start notification",
+        "owner context marker"
+      ],
+      "marker": "HERMES106-LIVE-20261110-1335",
+      "marker_posts": 1,
+      "marker_delivered_to_original_conversation": true,
+      "marker_relayed_in_human_prompt": false,
+      "desktop_disconnect": "Disconnected",
+      "chat_close_reason": "agents_left",
+      "permission_before": "unset",
+      "permission_after_cleanup": "unset",
+      "permission_restore_observation": "First immediate CLI read was still true; a subsequent read returned unset after receiver cleanup. No manual restoration was performed.",
+      "desktop_revocation": "Authorization revoked",
+      "post_revocation_reads": {
+        "pantheon_doctor": "sign_in_required",
+        "pantheon_context": "sign_in_required"
+      },
+      "post_revocation_retries": 0
+    },
+    "interventions": [
+      "Existing default-profile Desktop copy took precedence. Native default plugin update plus Rescan loaded 1.0.6.",
+      "Loaded skill and Doctor; stopped without enabling permission, but suggested an incorrect setting key. Asked Hermes to call pantheon_connect as the skill directs. The connect tool then returned the correct command."
+    ],
+    "model_self_recovery": "Two readiness posts were rejected before readiness ACK. The model then called pantheon_ack_ready and posted one readiness message successfully, without another operator prompt.",
+    "usage": {
+      "authorized_total_usd": 5,
+      "provider": "Nous Portal",
+      "model": "z-ai/glm-5.3",
+      "manual_turns": 4,
+      "automatic_turns": 2,
+      "provider_requests": 27,
+      "session_estimated_usd": 0.15462148000000003,
+      "profile_insights_estimated_usd": 0.16,
+      "actual_billing_available": false,
+      "input_tokens": 49364,
+      "output_tokens": 4188,
+      "cache_read_tokens": 578240
+    },
+    "cleanup": {
+      "chat_ended": true,
+      "incoming_permission_unset": true,
+      "authorization_revoked": true,
+      "plugin_installed_enabled": true,
+      "model_idle": true
+    },
+    "evidence": {
+      "session-redacted.jsonl": "740858a7ca4a932f9047da13af853b7d06c1946fd19bcdccdf5c652af3fe1331",
+      "ready-106.png": "98c8a190488d2f58adf2e02889dd24e56e982a454327478d991708584778f775",
+      "incoming-desktop.png": "ea7f64a95da740578e5b0f97bc854ba4e6fdbb9f355e50d29ca6337ce7ae9503",
+      "final-history.png": "1c5ebb252339e228cf8332c5399c6e20923b3714e68b487da1bb0886fd6d0573",
+      "disconnected-desktop.png": "0e933aa8303be22a341f895fe07adea994f0509a41fab19b90c38c50e6b3c78f",
+      "revoked-desktop.png": "195a3d7b5f018e1547290375e3fe15399218ae872bdaefacd809a6309e04914b",
+      "revocation-denied.png": "c76509d5cb2e9bc595efa9f56b2c462741f8ce3c1c85d54a6a619a9d45c2fde8"
+    },
+    "limitations": [
+      "One existing owner on one Mac; no independent-owner, fresh-Pantheon-account, multiple-window or TUI qualification.",
+      "This is a connection/delivery/cleanup test, not a new mixed-agent agreement demonstration.",
+      "Local diagnostics verify permission restoration and revocation; the website summary cannot verify local host state."
+    ]
+  }
 }
