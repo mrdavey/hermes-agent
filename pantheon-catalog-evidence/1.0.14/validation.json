@@ -1,0 +1,399 @@
+{
+  "schema": "pantheon.hermes-catalog-validation.v1",
+  "date": "2026-11-16",
+  "public_revision": "f637d22a618a11dccf57b3bc65b3942a604304f2",
+  "previous_catalog_revision": "8311f3e778ea1f4f56b45637e18e375ff95964fc",
+  "version": "1.0.14",
+  "host_os": "macOS arm64",
+  "source_revision": "932a3943615e10695f78a1d823b89013d306a1ac",
+  "host_lanes": [
+    {
+      "lane": "release",
+      "host_source": "3b421578588243f920886e6fe79a6faa87ea026e",
+      "host_release": "0.23.1",
+      "doctor_exit_code": 0,
+      "validator": {
+        "ok": true,
+        "checks": [
+          {
+            "name": "manifest",
+            "ok": true,
+            "detail": "plugin.yaml parses"
+          },
+          {
+            "name": "manifest fields",
+            "ok": true,
+            "detail": "name, version, description present"
+          },
+          {
+            "name": "requires_hermes",
+            "ok": true,
+            "detail": "spec '>=0.23.1' parses"
+          },
+          {
+            "name": "config schema",
+            "ok": true,
+            "detail": "not declared"
+          },
+          {
+            "name": "requires_env",
+            "ok": true,
+            "detail": "all entries UPPER_SNAKE"
+          },
+          {
+            "name": "oauth",
+            "ok": true,
+            "detail": "clients valid"
+          },
+          {
+            "name": "loadable",
+            "ok": true,
+            "detail": "entry: __init__.py, desktop/plugin.js"
+          },
+          {
+            "name": "python dependencies",
+            "ok": true,
+            "detail": "none declared"
+          },
+          {
+            "name": "capability probe",
+            "ok": true,
+            "detail": "register() ran in isolation"
+          },
+          {
+            "name": "declared tools",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared hooks",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared middleware",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "built-in tool collisions",
+            "ok": true,
+            "detail": "no collisions"
+          },
+          {
+            "name": "security scan",
+            "ok": true,
+            "detail": "safe"
+          },
+          {
+            "name": "no core override",
+            "ok": true,
+            "detail": "no runtime rebinds of Hermes core"
+          },
+          {
+            "name": "desktop surface",
+            "ok": true,
+            "detail": "stays inside the plugin SDK surface"
+          }
+        ],
+        "warnings": [],
+        "isolation": {
+          "verdict": "host",
+          "host_ready": true,
+          "reasons": [],
+          "notes": [
+            "dashboard backend API is served through the plugin host (buffered responses)"
+          ],
+          "ctx_methods": [
+            "inject_message",
+            "register_hook",
+            "register_skill",
+            "register_tool"
+          ]
+        }
+      },
+      "native_tests": {
+        "passed": 82,
+        "skipped": 0
+      },
+      "management_backend_tests": {
+        "passed": 5,
+        "skipped": 0
+      },
+      "dependency_notice": "Hermes Starlette TestClient emits an httpx deprecation notice; no plugin admission warning."
+    },
+    {
+      "lane": "upstream",
+      "host_source": "3007033aeb6f6ffc86b63f68b29796107435a740",
+      "host_release": null,
+      "doctor_exit_code": 0,
+      "validator": {
+        "ok": true,
+        "checks": [
+          {
+            "name": "manifest",
+            "ok": true,
+            "detail": "plugin.yaml parses"
+          },
+          {
+            "name": "manifest fields",
+            "ok": true,
+            "detail": "name, version, description present"
+          },
+          {
+            "name": "requires_hermes",
+            "ok": true,
+            "detail": "spec '>=0.23.1' parses"
+          },
+          {
+            "name": "config schema",
+            "ok": true,
+            "detail": "not declared"
+          },
+          {
+            "name": "requires_env",
+            "ok": true,
+            "detail": "all entries UPPER_SNAKE"
+          },
+          {
+            "name": "oauth",
+            "ok": true,
+            "detail": "clients valid"
+          },
+          {
+            "name": "loadable",
+            "ok": true,
+            "detail": "entry: __init__.py, desktop/plugin.js"
+          },
+          {
+            "name": "python dependencies",
+            "ok": true,
+            "detail": "none declared"
+          },
+          {
+            "name": "capability probe",
+            "ok": true,
+            "detail": "register() ran in isolation"
+          },
+          {
+            "name": "declared tools",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared hooks",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "declared middleware",
+            "ok": true,
+            "detail": "matches registrations"
+          },
+          {
+            "name": "built-in tool collisions",
+            "ok": true,
+            "detail": "no collisions"
+          },
+          {
+            "name": "security scan",
+            "ok": true,
+            "detail": "safe"
+          },
+          {
+            "name": "no core override",
+            "ok": true,
+            "detail": "no runtime rebinds of Hermes core"
+          },
+          {
+            "name": "desktop surface",
+            "ok": true,
+            "detail": "stays inside the plugin SDK surface"
+          }
+        ],
+        "warnings": [],
+        "isolation": {
+          "verdict": "host",
+          "host_ready": true,
+          "reasons": [],
+          "notes": [
+            "dashboard backend API is served through the plugin host (buffered responses)"
+          ],
+          "ctx_methods": [
+            "inject_message",
+            "register_hook",
+            "register_skill",
+            "register_tool"
+          ]
+        }
+      },
+      "native_tests": {
+        "passed": 82,
+        "skipped": 0
+      },
+      "management_backend_tests": {
+        "passed": 5,
+        "skipped": 0
+      },
+      "dependency_notice": "Hermes Starlette TestClient emits an httpx deprecation notice; no plugin admission warning."
+    }
+  ],
+  "original_review_regressions": {
+    "file_confinement_code_byte_identical_to_reviewed_106": true,
+    "passed_tests": [
+      "test_downloads_cannot_write_outside_storage",
+      "test_uploads_are_confined_and_refuse_sensitive_paths",
+      "test_uploads_exclude_custom_hermes_home_even_beneath_workspace",
+      "test_invalid_workspace_cannot_expand_upload_authority",
+      "test_file_rejections_precede_transfer_or_site_requests",
+      "test_site_bundles_reject_nested_secrets_and_symlinks",
+      "test_parent_replacement_cannot_redirect_read_or_write",
+      "test_missing_incoming_permission_requires_human_without_join_or_wait",
+      "test_new_incoming_permission_persists_across_connections",
+      "test_legacy_idle_setup_restores_before_new_connection",
+      "test_permission_restoration_does_not_override_later_human_choice",
+      "test_download_directory_uses_public_profile_storage",
+      "test_download_directory_rejects_replaced_storage"
+    ]
+  },
+  "catalog": {
+    "base_commit": "3007033aeb6f6ffc86b63f68b29796107435a740",
+    "entry_manifest_match": true,
+    "tools": 26,
+    "hooks": 9,
+    "full_schema_files": 2381,
+    "pantheon_schema_warnings": 0,
+    "other_existing_entries_have_schema_warnings": true,
+    "official_payload_confinement_and_self_updater_gates": "passed",
+    "tests_passed": 789,
+    "passing_test_files": {
+      "tests/ci/test_catalog_pinned_confinement.py": 15,
+      "tests/agent/test_copilot_acp_alias_compat.py": 5,
+      "tests/ci/test_classify_changes.py": 181,
+      "tests/ci/test_skills_index_watchdog_issue.py": 3,
+      "tests/hermes_cli/test_catalog_json.py": 7,
+      "tests/hermes_cli/test_default_plugins.py": 9,
+      "tests/hermes_cli/test_image_gen_picker.py": 9,
+      "tests/hermes_cli/test_left_core_camofox.py": 27,
+      "tests/ci/test_repo_guard_checks.py": 22,
+      "tests/hermes_cli/test_model_cache_swr.py": 13,
+      "tests/hermes_cli/test_model_catalog.py": 30,
+      "tests/hermes_cli/test_plugin_catalog_known_issues.py": 2,
+      "tests/hermes_cli/test_plugin_catalog_presence.py": 3,
+      "tests/hermes_cli/test_plugin_packs.py": 38,
+      "tests/hermes_cli/test_plugin_presence_by_name.py": 3,
+      "tests/hermes_cli/test_plugin_catalog.py": 25,
+      "tests/hermes_cli/test_plugins_auto_update.py": 8,
+      "tests/hermes_cli/test_plugins_hub_live_catalog.py": 4,
+      "tests/hermes_cli/test_plugins_hub_perf_guard.py": 5,
+      "tests/hermes_cli/test_post_update.py": 20,
+      "tests/hermes_cli/test_relay_shared_metrics.py": 102,
+      "tests/hermes_cli/test_shared_metrics_gateway.py": 3,
+      "tests/hermes_cli/test_shared_metrics_model_attribution.py": 21,
+      "tests/hermes_cli/test_web_plugins_catalog.py": 2,
+      "tests/hermes_cli/test_update_post_commit_followups.py": 15,
+      "tests/scripts/test_bundle_msix_names.py": 2,
+      "tests/scripts/test_contributor_map.py": 9,
+      "tests/scripts/test_validate_plugin_catalog.py": 40,
+      "tests/tools/test_skills_hub_clawhub.py": 27,
+      "tests/tui_gateway/test_plugins_catalog_lookup.py": 9,
+      "tests/website/test_catalog_rules_mirror.py": 1,
+      "tests/tui_gateway/test_plugins_manage_install.py": 6,
+      "tests/website/test_fetch_plugin_stars.py": 4,
+      "tests/website/test_extract_plugins.py": 14,
+      "tests/hermes_cli/test_login_backend_provenance.py": 10,
+      "tests/hermes_cli/test_plugin_install_inspected_sha_catalog.py": 9,
+      "tests/hermes_cli/test_plugins_auto_update_boundary.py": 6,
+      "tests/hermes_cli/test_plugins_catalog_requires_hermes.py": 5,
+      "tests/hermes_cli/test_plugin_update_transaction.py": 16,
+      "tests/pm/test_workspace_build_inputs.py": 18,
+      "tests/hermes_cli/test_plugins_cmd_catalog.py": 41
+    },
+    "skipped": {
+      "tests/ci/test_plugin_catalog_ci_confinement.py": {
+        "count": 44,
+        "reason": "upstream Linux-only platform marker; required in upstream CI"
+      }
+    },
+    "local_environment_correction": "Added the PM-provisioned uv directory to the isolated test PATH and reran all seven affected files; retained unchanged passes from the other files.",
+    "lint_guard_checks_passed": 21
+  },
+  "browser": {
+    "passed": 10,
+    "fixture": "Chromium with SDK adapter and synthetic data",
+    "viewport_widths": [
+      1280,
+      390,
+      360
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "exact_public_desktop_and_manifest_bytes": true
+  },
+  "upgrade": {
+    "passed": true,
+    "from": "8311f3e778ea1f4f56b45637e18e375ff95964fc",
+    "to": "f637d22a618a11dccf57b3bc65b3942a604304f2",
+    "native_git_update": true,
+    "installed_files_match_public_release": true,
+    "nonsecret_state_preserved": true,
+    "original_finite_grant_preserved": true,
+    "legacy_permission_restored": true,
+    "disabled_permission_not_enabled": true,
+    "new_human_preference_persists": true,
+    "synthetic_disposable_profile": true,
+    "catalogue_publication_or_live_agent_evidence": false
+  },
+  "install": {
+    "schema": "pantheon.hermes-native-install-probe.v1",
+    "fresh_install": true,
+    "default_branch": "main",
+    "successive_fixture_versions": [
+      "1.0.14",
+      "1.0.15",
+      "1.0.16"
+    ],
+    "state_preserved": true,
+    "native_disable_enable": true,
+    "named_profile_state_isolation": true,
+    "public_client_config_persisted": true,
+    "public_client_config_named_profile": true,
+    "native_login_reads_persisted_client": true,
+    "actual_agent_delivery": false,
+    "catalog_updates": false
+  },
+  "files": {
+    "LICENSE": "309f79c67f0ceeac5a7f4ba85867ed84424f3355392505c80069b88b6d8d065f",
+    "LICENSE-SCOPE.md": "0c59eaca7efaa6135bf87006ce31ca457ce350b62888acf3933178a15a8dd532",
+    "README.md": "a2d8ded3d09a3aab477a0200c1b30b4d29cbd0be91f063e877d2e2b2d4ba0649",
+    "SOURCE-PROVENANCE.json": "c1460004aba58f1ac34578fce87f607ebc168965c06e8cbee77e74f49ab16f8b",
+    "__init__.py": "6a2940aa4a3fd0922a62df5aa6b47113eb2bbc4e43d21cd4302e37be9b7f0d30",
+    "dashboard/manifest.json": "d87900c9d6de6c7b45bc97f9b09503228e23ed1728802f4c4b56eaddd15aae6b",
+    "dashboard/plugin_api.py": "f3c0d2056f626f777e074b9f2d111b18eb76c26006aadca2ae4c5cf214e4f031",
+    "desktop/plugin.js": "02623719961c0a2f2089bb63a5cb07a5eb9eabe5d554986848b302cd482e2e87",
+    "pantheon_native/__init__.py": "595f0cb0e21a541ab915b0c44d4eed5120c1432e9b8369536152a148e0cd1d3f",
+    "pantheon_native/accounting.py": "65009cf34e0fdb5765e966b06caa03a18772ac5526cbc79562a331b04c96c6ea",
+    "pantheon_native/api.py": "3d219ef08ccce1432d0708024e61c73669c08648e6cb9eb0e05baa067fa5d95b",
+    "pantheon_native/catalog.json": "5655891d1a48c8eec5314a26cf839957f7e230f55c4a380ede6f08cb09bcf344",
+    "pantheon_native/errors.py": "8c040d1c7992457b11a6dba1ec95343a273f85ee9584b58c62c6b5aa5ff844d0",
+    "pantheon_native/files.py": "0b5c5bdbf4911fa8966ad249a8d5255072be265f528d7506195ea2cee897e385",
+    "pantheon_native/permissions.py": "c118d7835fc3f3e76bf2735ccb9c21ebb0655d4ac9b417fc29844d9f786c7c9c",
+    "pantheon_native/presentation.json": "2984e1734ce38ab8e99f9ab9080ed45963d4535dda4b19bea9ab989b52bb73ed",
+    "pantheon_native/runtime.py": "be1aea8bc51f342a803b863847fe0e46c39ca376208ac653f9a3e235542b4f6d",
+    "pantheon_native/session.py": "e5b7c3d57e3402e22aef05fd2465f16926cac58e9e3f8de0c0f60d528c88ddf4",
+    "pantheon_native/state.py": "401058d5e9012d9dc35ef48d0916876e6fb6494d9d96aa3b40b3cead27e032aa",
+    "pantheon_native/tools.py": "4e144ab8de45b1abf5b0393ca241e78478c021097fc15ecb5d2605a05bf7f6a6",
+    "plugin.yaml": "3c7123274694e32eded30fcbcb0ea528eb4ea420085439628aef82e726e1f630",
+    "skills/collaborate/SKILL.md": "38c0223381cc49af1ec2ca9a540d398e8f7278f5a118052bacd73b10e9c659e1",
+    "tests/dashboard_contract.py": "da21e139d119328320f92e427687723c9e5118d2982748092bae96831b50c99b",
+    "tests/test_native.py": "ec971718d4e63a74498121f1ceeb25ba34026167b595c75867cbef1b22cbdd28"
+  },
+  "limitations": [
+    "Disposable profiles and synthetic identities; no owner credentials or provider calls.",
+    "SDK fixture is not a live Hermes Desktop or actual-agent delivery test.",
+    "Catalogue CI, maintainer review, publication and catalogue-name install/update readback remain separate.",
+    "The successive 1.0.15 and 1.0.16 probe versions are local fixture-only bumps, not published releases."
+  ]
+}
