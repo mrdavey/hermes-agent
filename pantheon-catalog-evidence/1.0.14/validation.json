@@ -340,6 +340,16 @@
     "installed_files_match_public_release": true,
     "nonsecret_state_preserved": true,
     "original_finite_grant_preserved": true,
+    "connection_record_fields": [
+      "id",
+      "chat",
+      "member",
+      "url",
+      "state",
+      "deadline",
+      "session",
+      "grant"
+    ],
     "legacy_permission_restored": true,
     "disabled_permission_not_enabled": true,
     "new_human_preference_persists": true,
